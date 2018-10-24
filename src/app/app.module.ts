@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
@@ -28,6 +27,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
   {
     path: 'perfil',
     component: PerfilComponent
-  },
+  }
 ];
 
 @NgModule({
@@ -81,7 +82,6 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    ReactiveFormsModule,
     AngularFireModule.initializeApp (environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,

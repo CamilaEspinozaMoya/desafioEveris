@@ -21,7 +21,15 @@ public movies: any;
     });
   }
 
-
+  public getInfoMovie(id) {
+    return new Promise( (resolve, reject) => {
+      this.http.get(`http://www.omdbapi.com/?apikey=d1ab6f3c&i=${id}`)
+    .subscribe((resp: any) => {
+      this.movies = Object.values(resp);
+      resolve(resp);
+    });
+    });
+  }
 
   /*
   getMovies(query: string) {
