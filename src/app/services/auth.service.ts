@@ -17,6 +17,14 @@ export class AuthService {
     this.user = firebaseAuth.authState;
     this.userList$ = this.database.list('/users');
   }
+  loginFacebook() {
+    return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+  }
+
+  loginGoogle() {
+    return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
   signup(email: string, password: string) {
     return this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password)
     .then(user => {
