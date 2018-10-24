@@ -22,6 +22,7 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 
 const appRoutes: Routes = [
@@ -60,12 +61,12 @@ const appRoutes: Routes = [
     ToolbarComponent,
     ComentariosComponent,
     CarruselComponent,
-    PerfilComponent
+    PerfilComponent,
+    FavoritosComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
