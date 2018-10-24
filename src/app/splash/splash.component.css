@@ -1,0 +1,47 @@
+/* 
+.splashStart {
+  background-image: url(/assets/img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+} */
+
+.splashStart{
+  background-image: radial-gradient(rgb(143, 218, 241), rgb(255, 255, 255));
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo,
+.btn {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.logogif{
+  text-align: center;
+}
+
+.logoinicio {
+  width: 35%;
+}
+
+.gif {
+  width: 3%;
+}
+
+@media (max-width: 750px) {
+  .logoinicio {
+      margin-top: 5em;
+      width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .logoinicio {
+      margin-top: 6em;
+      width: 60%;
+  }
+}
