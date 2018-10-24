@@ -2,8 +2,8 @@
   <div class="col-sm-12">
       <img src="/../assets/img/CINEMAred.png" width="80" height="80" alt="" srcset="">
     <a class="btnToolbar inicio" routerLink='/home' href="#"> Inicio</a>
-    <a class="btnToolbar perfil" routerLink='/perfil' *ngIf="(authService.user | async)" href="">Perfil</a>
+    <a class="btnToolbar perfil" routerLink='/perfil' *ngIf="(authService.user | async)" href=""><i class="fas fa-user"></i> <span class="textbtn"> Perfil</span></a>
     <a class="btnToolbar cerrar right" (click)="onLogout()" *ngIf="(authService.user | async)"   href=""><i class="fas fa-sign-out-alt"></i><span class="textbtn"> Cerrar Sesión</span></a>
-    <a class="btnToolbar ingresar right" *ngIf="!(authService.user | async)" routerLink='/login' href=""><i class="fas fa-user"></i> <span class="textbtn"> Ingresar</span> </a>
+    <a class="btnToolbar ingresar right" *ngIf="!(authService.user | async)" routerLink='/login' href=""><i class="fas fa-sign-in-alt"></i> <span class="textbtn"> Ingresar</span> </a>
   </div>
 </div>

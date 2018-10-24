@@ -1,11 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AppRoutingModule } from './app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
+import { SearchComponent } from './componentes/search/search.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ConexionService} from './services/services/conexion.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +27,7 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
-
+import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
 const appRoutes: Routes = [
   {
@@ -40,18 +45,19 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'perfil',
-    component: PerfilComponent
+    path: 'search',
+    component: SearchComponent
   },
   {
-    path: 'comentarios',
-    component: AgregarComentariosComponent
-  },
+    path: 'perfil',
+    component: PerfilComponent
+  }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchComponent,
     SplashComponent,
     LoginComponent,
     ComentariosComponent,
@@ -60,16 +66,21 @@ const appRoutes: Routes = [
     ToolbarComponent,
     ComentariosComponent,
     CarruselComponent,
-    PerfilComponent
+    PerfilComponent,
+    FavoritosComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
+    HttpModule,
+    HttpClientModule,
+    JsonpModule,
     BrowserAnimationsModule,
-    FormsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
     ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp (environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
@@ -77,7 +88,7 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     MatSnackBarModule,
   ],
-  providers: [AuthService, ConexionService],
+  providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
