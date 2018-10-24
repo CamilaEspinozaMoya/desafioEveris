@@ -15,6 +15,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+const appRoutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +28,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
