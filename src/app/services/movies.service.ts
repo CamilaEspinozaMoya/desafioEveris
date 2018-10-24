@@ -7,15 +7,15 @@ import { Movies } from '../interfaces/movies.interface';
 })
 
 export class MoviesService {
-public movies: Movies;
+public movies: any;
 
   constructor(public http: HttpClient) { }
 
  public getMovies(query) {
     return new Promise( (resolve, reject) => {
       this.http.get(`http://www.omdbapi.com/?apikey=d1ab6f3c&s=${query}`)
-    .subscribe((resp: Movies) => {
-      this.movies = resp;
+    .subscribe((resp: any) => {
+      this.movies = Object.values(resp);
       resolve(resp);
     });
     });

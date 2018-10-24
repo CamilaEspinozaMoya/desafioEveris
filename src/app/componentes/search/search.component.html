@@ -1,8 +1,6 @@
 
-
-    <input type="text" matInput [(ngModel)]="query" placeholder="" [matAutocomplete]="auto" (change)="getquery($event)">
-  
+    <input type="text" matInput [(ngModel)]="query" [matAutocomplete]="auto" (input)="getquery()"/>
   <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let movie of moviesService.movies" [value]="moviesService.movies">{{movie}}</mat-option>
+    <mat-option *ngFor="let option of autoList" [value]="option.Title">{{option.Title}}</mat-option>
   </mat-autocomplete>
 

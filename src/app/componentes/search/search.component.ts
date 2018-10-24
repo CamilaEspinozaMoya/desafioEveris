@@ -9,11 +9,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  public myControl = new FormControl();
 
   @Input()
-  public query = '';
-  public auto: any;
+  public query: String = '';
+  public autoList: any = [];
+  public selected: any;
 
   constructor( public moviesService: MoviesService) { }
 
@@ -22,8 +22,9 @@ export class SearchComponent implements OnInit {
 
   public getquery(query: any) {
     this.moviesService.getMovies(this.query).then(movie => {
-
-    })
+      this.autoList = [];
+      this.autoList = movie['Search'];
+    });
   }
 
 
