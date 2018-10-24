@@ -28,10 +28,7 @@ const appRoutes: Routes = [
     path: 'home',
     component: HomeComponent,
 
-  }
-];
-
-const appRoutes: Routes = [
+  },
   {
     path: 'login',
     component: LoginComponent
