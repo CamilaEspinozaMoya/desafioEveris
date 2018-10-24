@@ -1,9 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AppRoutingModule } from './app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { SearchComponent } from './componentes/search/search.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
@@ -24,7 +32,6 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
 
-
 const appRoutes: Routes = [
   {
     path: '',
@@ -41,6 +48,9 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'search',
+    component: SearchComponent
+  }
     path: 'perfil',
     component: PerfilComponent
   },
@@ -53,6 +63,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    SearchComponent,
     SplashComponent,
     LoginComponent,
     ComentariosComponent,
@@ -68,7 +79,14 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
+    HttpClientModule,
+    JsonpModule,
     BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp (environment.firebase),
@@ -78,7 +96,7 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     MatSnackBarModule,
   ],
-  providers: [AuthService, ConexionService],
+  providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
