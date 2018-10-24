@@ -15,7 +15,7 @@
               <br>
               <div class="row botones">
                 <div class="col-12" id="btn-registro">
-                  <button class='btn btn-secondary btnInput' (click)="onLogin()" id="btn-login">Ingresar</button>
+                  <button class='btn btn-secondary btnInput' (click)="onLogin()" routerLink='/home'id="btn-login">Ingresar</button>
                 </div>
                 <div class="col-12 registro" id="btn-registro">
                   <a (click)="onRegister()">Registrate </a>
@@ -26,13 +26,14 @@
 
               <div class="row">
                 <div class=" col-sm-12 ">
-                  <button mat-raised-button class=" btn btn-primary btn-block" (click)="onClickFacebookLogin()"><i
+                  <button mat-raised-button class=" btn btn-primary btn-block" (click)="onClickFacebookLogin()" routerLink='/home'><i
                       class="fab fa-facebook-f"></i>Facebook</button>
                 </div>
 
                 <div class="col-sm-12">
-                  <button  class=" btn btn-danger btn-block" (click)="onClickGoogleLogin()"><i
+                  <button  class=" btn btn-danger btn-block" (click)="onClickGoogleLogin()" routerLink='/home'><i
                       class="fab fa-google-plus-g"></i>Google</button>
+
                 </div>
               </div>
             </div>
