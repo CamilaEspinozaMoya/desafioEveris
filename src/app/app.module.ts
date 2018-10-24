@@ -18,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 
 const appRoutes: Routes = [
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+  {
+    path: 'perfil',
+    component: PerfilComponent
+  },
 ];
 
 @NgModule({
@@ -45,7 +50,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ToolbarComponent,
     ComentariosComponent,
-    CarruselComponent
+    CarruselComponent,
+    PerfilComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
