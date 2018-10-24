@@ -1,7 +1,7 @@
 <div class="container fondoLogin">
   <div class="row">
-    <div class="col-xs-12 col-lg-4" id='inputForm'>
-      <div class="container ">
+    <div class="col-xs-12   " id='inputForm'>
+     
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
 
@@ -25,13 +25,13 @@
               <!--Ejecutará onLogin-->
 
               <div class="row">
-                <div class=" col-sm-12 col-lg-6">
+                <div class=" col-sm-12 ">
                   <button mat-raised-button class=" btn btn-primary btn-block" (click)="onClickFacebookLogin()"><i
                       class="fab fa-facebook-f"></i>Facebook</button>
                 </div>
 
-                <div class="col-sm-12 col-lg-6">
-                  <button mat-raised-button color="warn" class=" btn btn-danger btn-block" (click)="onClickGoogleLogin()"><i
+                <div class="col-sm-12">
+                  <button  class=" btn btn-danger btn-block" (click)="onClickGoogleLogin()"><i
                       class="fab fa-google-plus-g"></i>Google</button>
                 </div>
               </div>
@@ -42,7 +42,7 @@
             <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
           </div>
         </form>
-      </div>
+     
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 ">
     </div>
