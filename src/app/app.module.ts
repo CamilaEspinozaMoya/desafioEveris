@@ -13,6 +13,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { SearchComponent } from './componentes/search/search.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ConexionService} from './services/services/conexion.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -27,8 +28,6 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {
