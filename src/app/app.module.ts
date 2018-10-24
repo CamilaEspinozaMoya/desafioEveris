@@ -15,7 +15,8 @@ import { AuthService } from './services/auth.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 
 
 const appRoutes: Routes = [
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     SplashComponent,
     LoginComponent,
     HomeComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    CarruselComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
