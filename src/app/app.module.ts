@@ -15,6 +15,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './home/home.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 const appRoutes: Routes = [
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     SplashComponent,
     LoginComponent,
     HomeComponent,
+    ToolbarComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
