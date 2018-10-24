@@ -41,11 +41,6 @@ export class LoginComponent implements OnInit {
         console.log('Se ha registrado con éxito', value);
       })
       .catch(() => {
-        this.snackBar.open('Error de registro, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
-            duration: 3000
-          });
       });
   }
 

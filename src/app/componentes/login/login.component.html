@@ -15,9 +15,9 @@
               <br>
               <input type="password" formControlName="password" placeholder="Contraseña">
               <br>
-              <button mat-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              <button mat-button id="btn-login" (click)="onLogin()" id="btn-login">Ingresar</button>
 
-              <button mat-button id="btn-login" (click)="createAuthForm()" [disabled]="!authForm.valid" id="btn-login">Registro</button>
+              <button mat-button (click)="onRegister()" id="btn-registro">Registro</button>
               
               <!--Ejecutará onLogin-->
 
