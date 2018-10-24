@@ -3,7 +3,7 @@
       <div class="col-sm-12 col-md-4 col-lg-4 ">
         </div>
     <div class="col-sm-12 col-md-4 col-lg-4">
-      <div class="container">
+      <div class="container inputForm">
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
 
