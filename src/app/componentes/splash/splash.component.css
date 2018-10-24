@@ -1,0 +1,39 @@
+.splashStart{
+  background-image: radial-gradient(rgb(143, 218, 241), rgb(255, 255, 255));
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo,
+.btn {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.logogif{
+  text-align: center;
+}
+
+.logoinicio {
+  margin-top: 3em;
+  width: 65%;
+}
+
+.gif {
+  width: 6%;
+}
+
+@media (max-width: 750px) {
+  .logoinicio {
+      margin-top: 5em;
+      width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .logoinicio {
+      margin-top: 6em;
+      width: 70%;
+  }
+}

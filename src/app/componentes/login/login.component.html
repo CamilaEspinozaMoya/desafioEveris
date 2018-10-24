@@ -1,3 +1,45 @@
-<p>
-  login works!
-</p>
+<div class="container_back">
+  <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 ">
+        </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <div class="container">
+        <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+          <div class="form-group">
+
+            <div id="login" *ngIf="!show">
+              <strong>
+                <p>Inicia sesión</p>
+              </strong>
+              <input type="email" formControlName="email" placeholder="Email">
+              <br>
+              <input type="password" formControlName="password" placeholder="Contraseña">
+              <br>
+              <button mat-button id="btn-login" (click)="onLogin()" routerLink='/home' id="btn-login">Ingresar</button>
+
+              <button mat-button  (click)="onRegister()" id="btn-registro">Registro</button>
+              
+              <!--Ejecutará onLogin-->
+
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <button mat-raised-button color="primary" class="btn-block" (click)="onClickFacebookLogin()" routerLink='/home'><i class="fab fa-facebook-f"></i>Facebook</button>
+                </div>
+
+                <div class="col-sm-12 col-lg-6">
+                  <button mat-raised-button color="warn" class="btn-block" (click)="onClickGoogleLogin()" routerLink='/home'><i class="fab fa-google-plus-g"></i>Google</button>
+                </div>
+              </div>
+            </div>
+
+           
+
+            <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4 ">
+      </div>
+  </div>
+</div>
