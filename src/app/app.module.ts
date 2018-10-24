@@ -6,6 +6,7 @@ import { SplashComponent } from './splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -30,16 +31,25 @@ const appRoutes: Routes = [
   }
 ];
 
+const appRoutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     LoginComponent,
     HomeComponent,
+    ComentariosComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,

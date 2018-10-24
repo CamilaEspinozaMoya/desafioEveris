@@ -1,10 +1,6 @@
 <div class="container_back">
   <div class="row">
-    <div class="col-sm-12 col-md-4 col-lg-4 ">
-    </div>
-
-    <div class="col-sm-12 col-md-4 col-lg-4">
-
+    <div class="col-sm-12 col-md-12 col-lg-12">
       <div class="container">
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
@@ -14,10 +10,11 @@
                 <p>Inicia sesión</p>
               </strong>
               <input type="email" formControlName="email" placeholder="Email">
-
+              <br>
               <input type="password" formControlName="password" placeholder="Contraseña">
-
+              <br>
               <button mat-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              
               <!--Ejecutará onLogin-->
 
               <div class="row">
@@ -76,8 +73,4 @@
       </div>
     </div>
   </div>
-
-  <div class="ccol-sm-12 col-md-4 col-lg-4 ">
-  </div>
-
 </div>
