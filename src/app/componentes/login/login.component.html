@@ -1,6 +1,8 @@
 <div class="container_back">
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-12 col-md-4 col-lg-4 ">
+        </div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
       <div class="container">
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
@@ -72,5 +74,7 @@
         </form>
       </div>
     </div>
+    <div class="col-sm-12 col-md-4 col-lg-4 ">
+      </div>
   </div>
 </div>
