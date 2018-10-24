@@ -12,11 +12,8 @@ import { AppComponent } from './app.component';
 import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SearchComponent } from './componentes/search/search.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ConexionService} from './services/services/conexion.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -50,13 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'search',
     component: SearchComponent
-  }
-    path: 'perfil',
-    component: PerfilComponent
   },
   {
-    path: 'comentarios',
-    component: AgregarComentariosComponent
+    path: 'perfil',
+    component: PerfilComponent
   },
 ];
 
@@ -86,7 +80,6 @@ const appRoutes: Routes = [
     MatAutocompleteModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    FormsModule
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp (environment.firebase),
