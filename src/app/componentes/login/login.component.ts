@@ -19,7 +19,11 @@ export class LoginComponent implements OnInit {
   public password: string;
   authList$: AngularFireList<any>;
 
-  constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public firebaseAuth: AngularFireAuth, public database: AngularFireDatabase) {
+  constructor(public formBuilder: FormBuilder,
+  public authService: AuthService,
+  public snackBar: MatSnackBar,
+  public firebaseAuth: AngularFireAuth,
+  public database: AngularFireDatabase) {
     const user = this.firebaseAuth.auth.currentUser;
     this.createAuthForm();
     this.authList$ = this.database.list('/auth');
@@ -41,11 +45,6 @@ export class LoginComponent implements OnInit {
         console.log('Se ha registrado con éxito', value);
       })
       .catch(() => {
-        this.snackBar.open('Error de registro, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
-            duration: 3000
-          });
       });
   }
 

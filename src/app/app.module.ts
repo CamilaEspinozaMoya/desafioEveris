@@ -7,17 +7,21 @@ import { LoginComponent } from './componentes/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
+import { ConexionService} from './services/services/conexion.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './services/auth.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AgregarComentariosComponent } from './componentes/agregar-comentarios/agregar-comentarios.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 
 const appRoutes: Routes = [
@@ -35,6 +39,14 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+  {
+    path: 'perfil',
+    component: PerfilComponent
+  },
+  {
+    path: 'comentarios',
+    component: AgregarComentariosComponent
+  },
 ];
 
 @NgModule({
@@ -42,10 +54,13 @@ const appRoutes: Routes = [
     AppComponent,
     SplashComponent,
     LoginComponent,
+    ComentariosComponent,
+    AgregarComentariosComponent,
     HomeComponent,
     ToolbarComponent,
     ComentariosComponent,
-    CarruselComponent
+    CarruselComponent,
+    PerfilComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -59,9 +74,10 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    AngularFirestoreModule,
     MatSnackBarModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, ConexionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
