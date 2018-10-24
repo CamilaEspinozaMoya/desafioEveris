@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 
 const appRoutes: Routes = [
@@ -16,7 +15,6 @@ const appRoutes: Routes = [
   },
 ];
 
-=======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -25,7 +23,6 @@ import { AuthService } from './services/auth.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
->>>>>>> upstream/master
 
 @NgModule({
   declarations: [
