@@ -1,11 +1,24 @@
-.container_back {
-  background-image: url("/assets/image/");
-  width: 100%;
+.fondoLogin{
+  background:url('../../../assets/img/logocinemaopacity.png') center center no-repeat;
   background-size: cover;
-  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
-/* Capa transparente*/
+#inputForm{
+background-color:#636969;
+
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+}
+
+/* Capa transparente */
 .container_back:before {
   content: "";
   width: 100%;
@@ -15,19 +28,10 @@
   opacity: 0.5;
 }
 
-#btn-login {
-  display: block;
-  margin: 10px;
-  margin-bottom: 20px;
-  margin-left: 0;
 
-}
 
 input {
   display: block;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  background-color: rgb(248, 241, 134);
   width: 100%;
 }
 
@@ -51,16 +55,24 @@ input {
   padding: 0 12px;
 }
 
-button {
-  font-weight: bold;
+ #btn-login{
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+ }
+
+#btn-registro{
+  display: flex !important;
+  justify-content: center !important ;
 }
 
-#register-link {
-  margin: 20px;
-  text-align: center;
+.start p {
+  color: rgba(210, 218, 224, 0.87);
+  font-weight: 500;
+  margin-top: 1em;
+  font-size: 16px
 }
 
-#register-btn {
-  display: inline-block;
-  float: right;
+.registro a{
+  color: #e8efef;
+  text-decoration: underline;
 }

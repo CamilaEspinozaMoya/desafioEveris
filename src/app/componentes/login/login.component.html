@@ -1,38 +1,43 @@
-<div class="container_back">
+<div class="container fondoLogin">
   <div class="row">
-      <div class="col-sm-12 col-md-4 col-lg-4 ">
-        </div>
-    <div class="col-sm-12 col-md-4 col-lg-4">
-      <div class="container inputForm">
+    <div class="col-xs-12 col-lg-4" id='inputForm'>
+      <div class="container ">
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
 
-            <div id="login" *ngIf="!show">
-              <strong>
-                <p>Inicia sesión</p>
-              </strong>
-              <input type="email" formControlName="email" placeholder="Email">
+            <div *ngIf="!show">
+              <div class='start' id="btn-registro">
+                <p><span>I N I C I A </span>-<span> S E S I Ó N </span></p>
+              </div>
+              <input class="form-control" type="email" formControlName="email" placeholder="Ingresa Email">
               <br>
-              <input type="password" formControlName="password" placeholder="Contraseña">
+              <input class="form-control" type="password" formControlName="password" placeholder=" Ingresa Contraseña">
               <br>
-              <button mat-button id="btn-login" (click)="onLogin()" id="btn-login">Ingresar</button>
+              <div class="row botones">
+                <div class="col-12" id="btn-registro">
+                  <button class='btn btn-secondary btnInput' (click)="onLogin()" id="btn-login">Ingresar</button>
+                </div>
+                <div class="col-12 registro" id="btn-registro">
+                  <a (click)="onRegister()">Registrate </a>
+                </div>
+              </div>
 
-              <button mat-button (click)="onRegister()" id="btn-registro">Registro</button>
-              
               <!--Ejecutará onLogin-->
 
               <div class="row">
-                <div class="col-sm-12 col-lg-6">
-                  <button mat-raised-button color="primary" class="btn-block" (click)="onClickFacebookLogin()"><i class="fab fa-facebook-f"></i>Facebook</button>
+                <div class=" col-sm-12 col-lg-6">
+                  <button mat-raised-button class=" btn btn-primary btn-block" (click)="onClickFacebookLogin()"><i
+                      class="fab fa-facebook-f"></i>Facebook</button>
                 </div>
 
                 <div class="col-sm-12 col-lg-6">
-                  <button mat-raised-button color="warn" class="btn-block" (click)="onClickGoogleLogin()"><i class="fab fa-google-plus-g"></i>Google</button>
+                  <button mat-raised-button color="warn" class=" btn btn-danger btn-block" (click)="onClickGoogleLogin()"><i
+                      class="fab fa-google-plus-g"></i>Google</button>
                 </div>
               </div>
             </div>
 
-           
+
 
             <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
           </div>
@@ -40,6 +45,5 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 ">
-      </div>
+    </div>
   </div>
-</div>
