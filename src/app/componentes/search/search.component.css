@@ -41,3 +41,18 @@
     color: orange;
     font-size: 1.2em;
   }
+
+  .title1{
+    font-family: 'Black Han Sans', sans-serif;
+  }
+
+  @media (max-width:600px)
+{
+  .title1{
+    font-size: 1.6em;
+  }
+}
+
+.input{
+  border-radius: 5px;
+}
