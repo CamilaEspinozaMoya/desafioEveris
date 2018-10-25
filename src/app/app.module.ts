@@ -49,10 +49,6 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'search',
-    component: SearchComponent
-  },
-  {
     path: 'perfil',
     component: PerfilComponent
   }

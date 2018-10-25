@@ -36,7 +36,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`favorites/${this.user}/`).push(newMovieFav);
     console.log('Fav added.');
@@ -48,7 +50,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`viewed/${this.user}/`).push(newMovieFav);
     console.log('Viewed added.');
@@ -60,7 +64,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`towatch/${this.user}/`).push(newMovieFav);
     console.log('To Watch added.');
@@ -80,7 +86,6 @@ export class FavoritoService {
       }))
     .subscribe((resp: any) => {
       this.favList = Object.values(resp); // make it readable
-      console.log(this.favList);
     });
   }
 
