@@ -9,3 +9,9 @@
     display: none;
   }
 }
+
+.welcomename{
+  margin-top: 1em;
+  float: right;
+  color: gray;
+}

@@ -3,9 +3,9 @@
 
 <div class="row">
   <div class="col-md-8 mx-auto text-center">
-    <h4 class="mt-4" *ngIf="">Películas favoritas</h4>
+    <h4 class="mt-4">Películas favoritas</h4>
     <hr>
-    <h4 class="titlehide">Aún no has añadido ninguna película</h4>
+    <!-- <h4 class="titlehide">Aún no has añadido ninguna película</h4> -->
     <div class="row favorites mt-1" *ngFor="let favorite of favsService.favList">
       <div class="col-md-6 text-center">
         <img src="{{favorite.poster}}" class="img" alt="poster">

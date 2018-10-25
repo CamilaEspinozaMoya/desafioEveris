@@ -37,6 +37,8 @@ export class SearchComponent implements OnInit {
 
   public addFav(movieInfo) {
     this.favoritos.newFav(movieInfo);
+    // let etiqueta = <HTMLFormElement>document.getElementsByClassName('titlehide')
+    // etiqueta.style.display = "none";
   }
 
   public addViewed(movieInfo) {
