@@ -17,6 +17,7 @@ export class FavoritoService {
   public viewList: any;
   public watchList: any;
   public path: any;
+  public visib: any;
 
   constructor(public db: AngularFireDatabase, public fbAuth: AngularFireAuth) {
     this.users$ = fbAuth.authState;
@@ -87,6 +88,7 @@ export class FavoritoService {
     .subscribe((resp: any) => {
       this.favList = Object.values(resp); // make it readable
     });
+    this.visib=false;
   }
 
   public getView() {
