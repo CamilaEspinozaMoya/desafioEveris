@@ -1,15 +1,40 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritoService {
-  Title: any;
-  Poster: any;
-  Genre: any;
-  Director: any;
-  $key: string;
-  constructor() { }
+  public users$: Observable<firebase.User>;
+  public userDetails$: firebase.User = null;
+  public user: string;
+  public movieInfo: any;
+
+
+  constructor(public db: AngularFireDatabase, public fbAuth: AngularFireAuth) {
+    this.users$ = fbAuth.authState;
+    this.users$.subscribe(
+    (user) => {
+      if (user) {
+        this.userDetails$ = user;
+      } else {
+        this.userDetails$ = null;
+      }
+    });
+  }
+
+  public newFav(movieInfo)  {
+    this.user = this.fbAuth.auth.currentUser.uid;
+    const newMovieFav = {
+      title: movieInfo[0],
+      year: movieInfo[1],
+      sinopsis: movieInfo[9],
+      poster: movieInfo[13]
+    };
+    this.db.list(`favorites/${this.user}/`).push(newMovieFav);
+    console.log('Fav added.');
+  }
 }
