@@ -1,20 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
-
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
-
 import {map} from 'rxjs/operators';
-import { Movies } from '../interfaces/movies.interface';
 
-export interface MoviesData {
-  title: any;
-  poster: any;
-  genre: any;
-  director: any;
-  $key: string;
-}
 @Injectable({
   providedIn: 'root'
 })
@@ -46,7 +36,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`favorites/${this.user}/`).push(newMovieFav);
     console.log('Fav added.');
@@ -58,7 +50,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`viewed/${this.user}/`).push(newMovieFav);
     console.log('Viewed added.');
@@ -70,7 +64,9 @@ export class FavoritoService {
       title: movieInfo[0],
       year: movieInfo[1],
       sinopsis: movieInfo[9],
-      poster: movieInfo[13]
+      poster: movieInfo[13],
+      ranking: movieInfo[16],
+      director: movieInfo[6]
     };
     this.db.list(`towatch/${this.user}/`).push(newMovieFav);
     console.log('To Watch added.');
@@ -90,7 +86,6 @@ export class FavoritoService {
       }))
     .subscribe((resp: any) => {
       this.favList = Object.values(resp); // make it readable
-      console.log(this.favList);
     });
   }
 
@@ -144,3 +139,4 @@ export class FavoritoService {
   }
 
 }
+
