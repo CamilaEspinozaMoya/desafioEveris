@@ -10,7 +10,7 @@
  <img src="{{favorite.poster}}" alt="">
 {{favorite.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)"><i class="fas fa-trash"></i></button>
-<a (click)="amazon.getAmazon(favorite.title)" title="Ver en Amazon" href="{{amazon.url}}"><i class="fas fa-amazon"></i></a>
+<a (click)="amazon.getAmazon(favorite.title)" target="_blank" title="Ver en Amazon" href="{{amazon.url}}"><i class="fab fa-amazon"></i></a>
 </div>
 
 <h4>Películas por ver</h4>
@@ -22,6 +22,7 @@
 <img src="{{view.poster}}" alt="">
 {{view.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteView(view.$key)"><i class="fas fa-trash"></i></button>
+<a (click)="amazon.getAmazon(view.title)" target="_blank" title="Ver en Amazon" href="{{amazon.url}}"><i class="fab fa-amazon"></i></a>
 </div>
 
 <h4>Películas vistas</h4>
@@ -33,4 +34,5 @@
 <img src="{{watch.poster}}" alt="">
 {{watch.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteWatch(watch.$key)"><i class="fas fa-trash"></i></button>
+<a (click)="amazon.getAmazon(watch.title)" target="_blank" title="Ver en Amazon" href="{{amazon.url}}"><i class="fab fa-amazon"></i></a>
 </div>
