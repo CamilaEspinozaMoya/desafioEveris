@@ -27,7 +27,6 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
-
 import { DataprofileComponent } from './componentes/dataprofile/dataprofile.component';
 import { MatCardModule} from '@angular/material/card';
 
