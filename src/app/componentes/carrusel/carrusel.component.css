@@ -15,7 +15,6 @@
   float: right;
   color: gray;
 }
-.subtitle{
-  color: #e41d24;
-  text-align: center;
+.title{
+  font-family: 'Encode Sans Condensed', sans-serif;
 }
