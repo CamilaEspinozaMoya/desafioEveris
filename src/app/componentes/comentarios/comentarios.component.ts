@@ -23,7 +23,7 @@ export class ComentariosComponent implements OnInit {
   constructor(
     private conexion: ConexionService,
     formBuilder: FormBuilder,
-    private authService: AuthService,
+    public authService: AuthService,
     public snackBar: MatSnackBar,
     private router: Router) {
     this.conexion.publicacionesItem().subscribe( item => {
