@@ -30,6 +30,7 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { DataprofileComponent } from './componentes/dataprofile/dataprofile.component';
 import { MatCardModule} from '@angular/material/card';
 import { FacebookModule } from "ngx-facebook";
+import { FacebookComponent } from './componentes/facebook/facebook.component';
 
 const appRoutes: Routes = [
   {
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
     CarruselComponent,
     PerfilComponent,
     DataprofileComponent,
+    FacebookComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
