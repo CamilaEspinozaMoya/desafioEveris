@@ -11,6 +11,7 @@ public finder: any;
 
   constructor(public http: HttpClient) { }
 
+<<<<<<< HEAD
   public getTwitter(finder) {
     return new Promise( (resolve, reject) => {
       this.http.get(`https://api.twitter.com/1.1/search/tweets.json?q=${finder}&result_type=recent`)
@@ -20,6 +21,14 @@ public finder: any;
       console.log(finder);
       
       
+=======
+  public getHashtags(query) {
+    return new Promise( (resolve, reject) => {
+      this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23${query}')
+    .subscribe((resp: any) => {
+      this.twitter = Object.values(resp);
+      resolve(resp);      
+>>>>>>> upstream/master
     });
     });
   }
