@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
-import { TwitterService } from "../../services/twitter.service";
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FavoritoService } from '../../services/favorito.service';
 import { AmazonService } from '../../services/amazon.service';
@@ -20,16 +19,11 @@ export class SearchComponent implements OnInit {
   public finder: any;
   public tweetList: any;
 
-<<<<<<< HEAD
-
-  constructor( public moviesService: MoviesService, public favoritos: FavoritoService, public db: AngularFireDatabase, twitterService: TwitterService) { }
-=======
   constructor(
     public moviesService: MoviesService,
     public favoritos: FavoritoService,
     public db: AngularFireDatabase,
     public as: AmazonService) { }
->>>>>>> upstream/master
 
   ngOnInit() {
    }
