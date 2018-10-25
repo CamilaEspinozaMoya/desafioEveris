@@ -15,16 +15,14 @@ export interface MoviesData {
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
+export class FavoritoService {
   public users$: Observable<firebase.User>;
   public userDetails$: firebase.User = null;
   public user: string;
-  public movie: Movies;
-  public favoritoData: any;
-  public path: any;
-  public favoritoList: any;
+  public movieInfo: any;
 
-  constructor(private db: AngularFireDatabase, private fbAuth: AngularFireAuth) {
+
+  constructor(public db: AngularFireDatabase, public fbAuth: AngularFireAuth) {
     this.users$ = fbAuth.authState;
     this.users$.subscribe(
     (user) => {
@@ -36,37 +34,15 @@ export class ItemService {
     });
   }
 
-  getItems() {
+  public newFav(movieInfo)  {
     this.user = this.fbAuth.auth.currentUser.uid;
-    this.db.list(`items/${this.user}`).snapshotChanges()
-    .pipe(map(
-      snapshot => {
-        const result = [];
-        for (let i = 0; i < snapshot.length; i++) {
-          const favoritoVal = snapshot[i].payload.val();
-          favoritoVal['$key'] = snapshot[i].payload.key; // add $key
-          result.push(favoritoVal);
-        } return result;
-      }))
-    .subscribe((resp: any) => {
-      this.favoritoList = Object.values(resp); // make it readable
-    });
-  }
-
-  // Add favorite
-  createItem(movie: any)  {
-    this.user = this.fbAuth.auth.currentUser.uid;
-    const favoritoData = {
-      Title: movie.Title,
-      Poster: movie.Poster
+    const newMovieFav = {
+      title: movieInfo[0],
+      year: movieInfo[1],
+      sinopsis: movieInfo[9],
+      poster: movieInfo[13]
     };
-    this.db.list(`items/${this.user}/`).push(favoritoData);
+    this.db.list(`favorites/${this.user}/`).push(newMovieFav);
     console.log('Fav added.');
   }
-
-    // Delete Favorite
-    deleteItem(dataId) {
-      this.path = this.db.list(`items/${this.fbAuth.auth.currentUser.uid}/${dataId}`).remove();
-      console.log('Fav removed.');
-    }
 }
