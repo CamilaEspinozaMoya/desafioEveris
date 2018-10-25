@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
+import { TwitterService } from "../../services/twitter.service";
 
 @Component({
   selector: 'app-search',
@@ -14,7 +15,7 @@ export class SearchComponent implements OnInit {
   public id: any;
   public moviesInfo: any;
 
-  constructor( public moviesService: MoviesService) { }
+  constructor( public moviesService: MoviesService, twitterService: TwitterService) { }
 
   ngOnInit() {
    }
