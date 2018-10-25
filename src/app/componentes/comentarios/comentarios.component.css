@@ -6,6 +6,7 @@
 
 .fa-trash-alt, .fa-pencil-alt{
   color: rgb(66, 66, 66);
+  cursor: pointer;
 }
 
 .alert-warning{
