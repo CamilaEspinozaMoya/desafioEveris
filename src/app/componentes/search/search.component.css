@@ -40,7 +40,11 @@
   .fa-amazon{
     color: orange;
     font-size: 1.2em;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 5px;
   }
+
 
   .title1{
     font-family: 'Black Han Sans', sans-serif;
@@ -56,3 +60,4 @@
 .input{
   border-radius: 5px;
 }
+
