@@ -9,6 +9,7 @@
  <img src="{{favorite.poster}}" alt="">
 {{favorite.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)"><i class="fas fa-trash"></i></button>
+<button type="button" class="button" title="Ver en Amazon"><i class="fas fa-amazon"></i></button>
 </div>
 <h4>Películas por ver</h4>
 <div *ngFor="let view of favsService.viewList"> 
