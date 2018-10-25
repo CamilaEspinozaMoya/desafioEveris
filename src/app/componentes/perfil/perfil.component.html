@@ -1,33 +1,16 @@
 <app-toolbar></app-toolbar>
 <app-dataprofile></app-dataprofile>
 
-<<<<<<< HEAD
-<h4>Favoritas</h4>
-<div class="row">
-  <div class="col-md-8 mx-auto text-center">
-    <h4 class="mt-4" *ngIf="">Películas favoritas</h4>
-    <hr>
-    <h4 class="titlehide">Aún no has añadido ninguna película</h4>
-=======
 <div class="row">
   <div class="col-md-8 mx-auto text-center contenedormovies">
     <h4 class="mt-4 titles">Películas favoritas</h4>
     <hr>
     <!-- <h4 class="titlehide" *ngIf="visib" >Aún no has añadido ninguna película</h4> -->
->>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
     <div class="row favorites mt-1" *ngFor="let favorite of favsService.favList">
       <div class="col-md-6 text-center">
         <img src="{{favorite.poster}}" class="img" alt="poster">
       </div>
       <div class="col-md-6 text-left">
-<<<<<<< HEAD
-        <p class="mt-4">
-          <strong>Título:</strong> {{favorite.title}} </p>
-        <p>
-          <strong>Año:</strong> {{favorite.year}} </p>
-        <p>
-          <strong>Sinopsis:</strong> {{favorite.sinopsis}}</p>
-=======
           <p class="mt-4">
               <strong>Título:</strong> {{favorite.title}} </p>
             <p>
@@ -38,17 +21,13 @@
               <strong>Director:</strong> {{favorite.director}}</p>
             <p>
               <strong>Ranking:</strong> {{favorite.ranking}}</p>
->>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
         <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)">
           <i class="fas fa-trash"></i>
         </button>
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
 
 <div class="row mt-5">
     <div class="col-md-8 mx-auto text-center contenedormovies">
