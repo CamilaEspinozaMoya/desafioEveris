@@ -13,9 +13,26 @@
 .welcomename{
   margin-top: 1em;
   float: right;
-  color: gray;
+  color: rgb(58, 57, 57);
 }
+
+.title{
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 2.5em;
+}
+
+@media (max-width:600px)
+{
+  .title{
+    font-size: 2em;
+  }
+}
+
 .subtitle{
-  color: #e41d24;
-  text-align: center;
+  color: #9c050b;
+}
+
+.popcorn{
+  width: 2em;
+  padding-bottom: 0.5em;
 }
