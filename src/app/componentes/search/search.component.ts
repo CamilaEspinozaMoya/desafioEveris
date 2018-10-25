@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FavoritoService } from '../../services/favorito.service';
-// import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -22,8 +22,7 @@ export class SearchComponent implements OnInit {
   constructor( public moviesService: MoviesService, public favoritos: FavoritoService, public db: AngularFireDatabase) { }
 
   ngOnInit() {
-    // let response = this.http.get(' https://api.twitter.com/1.1/search/tweets.json?q=%23freebandnames')
-    // response.subscribe((response)=>console.log(response))
+
    }
 
   public getquery(query: any) {
