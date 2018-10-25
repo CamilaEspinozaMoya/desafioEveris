@@ -30,7 +30,7 @@
               <p><strong>Sinopsis:</strong>  {{moviesInfo[9]}} </p>
             </mat-card-content>
             <mat-card-actions>
-              <button type="button" class="button btn" title="Añadir película a favoritos">
+              <button type="button" class="button btn" title="Añadir película a favoritos" (click)="addFav(moviesInfo)">
                 <i class="fas fa-heart"></i>
               </button>
               <button type="button" class="button btn" title="Añadir a pendientes de ver">
