@@ -1,6 +1,5 @@
-
-<form (ngSubmit)="agregar()" *ngIf="(authService.user | async)">
-  <input type="text" placeholder="¿Que deseas compartir?"
+<form (ngSubmit)="agregar()">
+  <input type="text" placeholder="Comenta sobre esta película..."
    name="name" class="form-control"
    [(ngModel)]="item.name">
   <button class="btn btn-warning mt-3 mb-3 float-right" type="submit">Publicar</button>

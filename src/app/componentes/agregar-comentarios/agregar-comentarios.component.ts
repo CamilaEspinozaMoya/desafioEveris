@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from '../../services/services/conexion.service'
 import { FormGroup } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class AgregarComentariosComponent implements OnInit {
     name: '',
   }
 
-  constructor(private servicio: ConexionService) { }
+  constructor(private servicio: ConexionService, public authservice: AuthService) { }
 
   ngOnInit() {
   }
