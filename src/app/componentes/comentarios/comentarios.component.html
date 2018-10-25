@@ -1,16 +1,23 @@
-<div class="alert alert-warning" role="alert" *ngFor="let item of items">
-  {{item.name}}
-  <div class="d-block">
-  <div class="float-right" (click)="eliminar(item)">
-    <i class="far fa-trash-alt"></i>
-  </div>
-  <div class="float-right mx-2" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
-    <i class="fas fa-pencil-alt"></i>
-  </div>
-  <div class="float-right mx-2">
+<app-agregar-comentarios></app-agregar-comentarios>
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <div class="alert alert-warning mt-1" role="alert" *ngFor="let item of items">
+      {{item.name}}
+      <div class="d-block">
+      <div class="float-right" (click)="eliminar(item)">
+        <i class="far fa-trash-alt"></i>
+      </div>
+      <div class="float-right mx-2" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
+        <i class="fas fa-pencil-alt"></i>
+      </div>
+      <div class="float-right mx-2">
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
