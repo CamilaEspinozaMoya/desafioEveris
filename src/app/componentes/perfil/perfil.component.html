@@ -2,15 +2,28 @@
 <app-dataprofile></app-dataprofile>
 
 <h4>Favoritas</h4>
-<div *ngFor="let favorite of favsService.favList"> 
-{{favorite.title}}
-{{favorite.sinopsis}}
-{{favorite.ranking}}
-{{favorite.director}}
- <img src="{{favorite.poster}}" alt="">
-{{favorite.year}}
-<button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)"><i class="fas fa-trash"></i></button>
-</div>
+<div class="row">
+  <div class="col-md-8 mx-auto text-center">
+    <h4 class="mt-4" *ngIf="">Películas favoritas</h4>
+    <hr>
+    <h4 class="titlehide">Aún no has añadido ninguna película</h4>
+    <div class="row favorites mt-1" *ngFor="let favorite of favsService.favList">
+      <div class="col-md-6 text-center">
+        <img src="{{favorite.poster}}" class="img" alt="poster">
+      </div>
+      <div class="col-md-6 text-left">
+        <p class="mt-4">
+          <strong>Título:</strong> {{favorite.title}} </p>
+        <p>
+          <strong>Año:</strong> {{favorite.year}} </p>
+        <p>
+          <strong>Sinopsis:</strong> {{favorite.sinopsis}}</p>
+        <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
 
 
