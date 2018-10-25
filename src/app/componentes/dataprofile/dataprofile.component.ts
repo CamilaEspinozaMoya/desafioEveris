@@ -12,7 +12,7 @@ export class DataprofileComponent implements OnInit {
   photo: any;
   email: any;
 
-  constructor(public afAuth: AngularFireAuth) { 
+  constructor(public afAuth: AngularFireAuth) {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userName = user.displayName;
