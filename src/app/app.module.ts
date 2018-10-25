@@ -28,6 +28,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { FavoritosComponent } from './componentes/favoritos/favoritos.component';
+import { MatCardModule} from '@angular/material/card';
 import { TwitterComponent } from './componentes/twitter/twitter.component';
 
 const appRoutes: Routes = [
@@ -91,6 +92,7 @@ const appRoutes: Routes = [
     AngularFireStorageModule,
     AngularFirestoreModule,
     MatSnackBarModule,
+    MatCardModule
   ],
   providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]
