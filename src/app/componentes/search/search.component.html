@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-10 mx-auto text-center">
       <h2 class="mt-5 mb-2">¡Busca tus películas favoritas!</h2>
+      <hr>
       <input type="text" matInput [(ngModel)]="query" [matAutocomplete]="auto" (input)="getquery(query)" />
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let option of autoList" [value]="option.Title">
