@@ -18,31 +18,32 @@
     <div *ngIf="moviesInfo">
       <mat-card class="example-card">
         <div class="row">
-        <div class="col-md-6 text-center">
-          <mat-card-header>
-            <mat-card-title>{{moviesInfo[0]}}</mat-card-title>
-            <mat-card-subtitle>Año: {{moviesInfo[1]}}</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="{{moviesInfo[13]}}">
+          <div class="col-md-6 text-center">
+            <mat-card-header>
+              <mat-card-title>{{moviesInfo[0]}}</mat-card-title>
+              <mat-card-subtitle>Año: {{moviesInfo[1]}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{moviesInfo[13]}}">
+          </div>
+          <div class="col-md-6">
+            <mat-card-content class="mt-5 pt-4">
+              <p>
+                <strong>Sinopsis:</strong> {{moviesInfo[9]}} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button type="button" class="button btn" title="Añadir película a favoritos">
+                <i class="fas fa-heart"></i>
+              </button>
+              <button type="button" class="button btn" title="Añadir a pendientes de ver">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button type="button" class="button btn" title="Añadir a peliculas vistas">
+                <i class="far fa-check-circle"></i>
+              </button>
+              <app-comentarios></app-comentarios>
+            </mat-card-actions>
+          </div>
         </div>
-        <div class="col-md-6">
-          <mat-card-content class="mt-5 pt-4">
-            <p><strong>Sinopsis:</strong>  {{moviesInfo[9]}} </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button type="button" class="button btn" title="Añadir película a favoritos">
-              <i class="fas fa-heart"></i>
-            </button>
-            <button type="button" class="button btn" title="Añadir a pendientes de ver">
-              <i class="fas fa-eye"></i>
-            </button>
-            <button type="button" class="button btn" title="Añadir a peliculas vistas">
-              <i class="far fa-check-circle"></i>
-            </button>
-            <app-comentarios></app-comentarios>
-          </mat-card-actions>
-        </div>
-      </div>
       </mat-card>
     </div>
   </div>
