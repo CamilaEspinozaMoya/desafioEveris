@@ -4,6 +4,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
+
 import {map} from 'rxjs/operators';
 import { Movies } from '../interfaces/movies.interface';
 
