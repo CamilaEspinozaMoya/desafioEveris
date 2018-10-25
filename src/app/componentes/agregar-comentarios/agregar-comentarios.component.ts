@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConexionService } from '../../services/services/conexion.service';
+import { ConexionService } from '../../services/conexion.service';
 import { FormGroup } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 

@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
     public moviesService: MoviesService,
     public favoritos: FavoritoService,
     public db: AngularFireDatabase,
-    public as: AmazonService) { }
+    public amazon: AmazonService) { }
 
   ngOnInit() {
 
