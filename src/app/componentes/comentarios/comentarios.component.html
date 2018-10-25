@@ -1,15 +1,17 @@
 <app-agregar-comentarios></app-agregar-comentarios>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-10 mx-auto">
     <div class="alert alert-warning mt-1" role="alert" *ngFor="let item of items">
       {{item.name}}
       <div class="d-block">
-      <div class="float-right ml-1" (click)="eliminar(item)">
+      <div class="float-right" (click)="eliminar(item)">
         <i class="far fa-trash-alt"></i>
       </div>
-      <div class="float-right" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
+      <div class="float-right mx-2" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
         <i class="fas fa-pencil-alt"></i>
       </div>
+      <div class="float-right mx-2">
+        </div>
       </div>
     </div>
   </div>

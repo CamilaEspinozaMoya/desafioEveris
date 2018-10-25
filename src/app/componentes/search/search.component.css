@@ -4,24 +4,12 @@
     width: 100%;
   }
   
-  .button{
-    border: none;
-    background-color: transparent;
-  }
-
-  .btn{
-    cursor: pointer;
-  }
-
-  .btn:hover{
-    color: #9c050b;
-  }
   .example-full-width {
     width: 100%;
   }
 
   input {
-    width: 80%;
+    width: 600px;
   }
 
   .row{
@@ -30,9 +18,5 @@
     width: 100%;
   }
   .example-card {
-    width: 80%;
-    margin-left: 10%;
-  }
-  .mat-card-image{
-    width: 70%;
+    width: 50%;
   }
