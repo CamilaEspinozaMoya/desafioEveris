@@ -12,7 +12,7 @@ public url: string;
 
   constructor(public http: HttpClient) { }
 
-  public getTAmazon(title) {
+  public getAmazon(title) {
     this.replace = title.replace(' ', '-');
     this.url = `https://www.amazon.com/${this.replace}/dp/B07DQMJBHS/`;
     console.log(this.url);
