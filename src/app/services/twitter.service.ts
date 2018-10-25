@@ -8,18 +8,12 @@ import { HttpClient} from '@angular/common/http';
 
 export class TwitterService {
 public twitter: any;
+public finder: any;
 
   constructor(public http: HttpClient) { }
 
-  public getMovies() {
-    return new Promise( (resolve, reject) => {
-      this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23')
-    .subscribe((resp: any) => {
-      this.twitter = Object.values(resp);
-      resolve(resp);      
-      
-    });
-    });
+  public getTwitter(finder) {
+    return this.http.get(`https://twitter.com/search?q=%23${finder}`);
   }
 }
 
