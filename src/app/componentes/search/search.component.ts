@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FavoritoService } from '../../services/favorito.service';
+import { AmazonService } from '../../services/amazon.service';
 
 
 
@@ -18,8 +19,14 @@ export class SearchComponent implements OnInit {
   public autoList: any = [];
   public id: any;
   public moviesInfo: any;
+  public finder: any;
+  public tweetList: any;
 
-  constructor( public moviesService: MoviesService, public favoritos: FavoritoService, public db: AngularFireDatabase) { }
+  constructor(
+    public moviesService: MoviesService,
+    public favoritos: FavoritoService,
+    public db: AngularFireDatabase,
+    public as: AmazonService) { }
 
   ngOnInit() {
 
@@ -32,10 +39,12 @@ export class SearchComponent implements OnInit {
     });
   }
 
+
   public viewCard(id) {
     this.moviesService.getInfoMovie(id)
     .subscribe((resp: any) => {
       this.moviesInfo = Object.values(resp);
+      console.log(this.moviesInfo);
     });
   }
 
@@ -51,5 +60,8 @@ export class SearchComponent implements OnInit {
     this.favoritos.newToWatch(movieInfo);
   }
 
+  // public amazon(title) {
+  //   this.as.getTAmazon(title);
+  // }
 
 }
