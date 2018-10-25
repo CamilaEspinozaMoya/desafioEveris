@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
-import { FormControl } from '@angular/forms';
-
 
 @Component({
   selector: 'app-search',
@@ -13,7 +11,8 @@ export class SearchComponent implements OnInit {
   @Input()
   public query: String = '';
   public autoList: any = [];
-  public selected: any;
+  public movieList: any = [];
+  public id: any;
 
   constructor( public moviesService: MoviesService) { }
 
@@ -27,7 +26,12 @@ export class SearchComponent implements OnInit {
     });
   }
 
-
-
+  public view(id) {
+    console.log(id);
+    this.moviesService.getInfoMovie(this.id).then(movie => {
+      this.movieList = movie['Search'];
+      console.log(this.movieList);
+    });
+  }
 
 }

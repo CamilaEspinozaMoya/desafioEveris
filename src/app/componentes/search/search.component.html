@@ -1,6 +1,6 @@
 
     <input type="text" matInput [(ngModel)]="query" [matAutocomplete]="auto" (input)="getquery()"/>
   <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let option of autoList" [value]="option.Title">{{option.Title}}</mat-option>
+    <mat-option *ngFor="let option of autoList" [value]="option.Title">{{option.Title}} <button type="button" class="button"  title="ver info de película" (click)="view(option.imdbID)"><i class="fas fa-star"></i></button></mat-option>
   </mat-autocomplete>
 
