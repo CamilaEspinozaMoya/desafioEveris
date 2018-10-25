@@ -33,6 +33,8 @@ import { MatCardModule} from '@angular/material/card';
 import { TwitterComponent } from './componentes/twitter/twitter.component';
 
 
+
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -97,6 +99,7 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     MatSnackBarModule,
     MatCardModule
+   
   ],
   providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]
