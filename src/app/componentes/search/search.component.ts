@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   public id: any;
   public moviesInfo: any;
 
-  constructor( public moviesService: MoviesService, public favoritos: FavoritoService, public db: AngularFireDatabase) { }
+  constructor( public moviesService: MoviesService, public favoritos: FavoritoService,public db: AngularFireDatabase) { }
 
   ngOnInit() {
    }
@@ -35,17 +35,9 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  public addFav(movieInfo) {
-    this.favoritos.newFav(movieInfo);
-  }
-
-  public addViewed(movieInfo) {
-    this.favoritos.newViewed(movieInfo);
-  }
-
-  public addToWatch(movieInfo) {
-    this.favoritos.newToWatch(movieInfo);
-  }
+ public addFav(movieInfo) {
+   this.favoritos.newFav(movieInfo);
+ }
 
 
 }
