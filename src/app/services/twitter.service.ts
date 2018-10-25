@@ -16,7 +16,7 @@ public twitter: any;
       this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23${query}')
     .subscribe((resp: any) => {
       this.twitter = Object.values(resp);
-      resolve(resp);      
+      resolve(resp);
     });
     });
   }
