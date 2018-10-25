@@ -17,3 +17,6 @@
     margin: 0;
     width: 100%;
   }
+  .example-card {
+    width: 50%;
+  }

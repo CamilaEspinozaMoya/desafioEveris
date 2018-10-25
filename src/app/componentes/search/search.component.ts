@@ -11,8 +11,8 @@ export class SearchComponent implements OnInit {
   @Input()
   public query: String = '';
   public autoList: any = [];
-  public movieList: any = [];
   public id: any;
+  public moviesInfo: any;
 
   constructor( public moviesService: MoviesService) { }
 
@@ -26,12 +26,13 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  public view(id) {
-    console.log(id);
-    this.moviesService.getInfoMovie(this.id).then(movie => {
-      this.movieList = movie['Search'];
-      console.log(this.movieList);
+  public viewCard(id) {
+    this.moviesService.getInfoMovie(id)
+    .subscribe((resp: any) => {
+      this.moviesInfo = Object.values(resp);
+      console.log(this.moviesInfo);
     });
   }
+
 
 }
