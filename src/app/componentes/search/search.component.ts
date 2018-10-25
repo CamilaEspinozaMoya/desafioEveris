@@ -3,6 +3,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 import { TwitterService } from "../../services/twitter.service";
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FavoritoService } from '../../services/favorito.service';
+import { AmazonService } from '../../services/amazon.service';
 
 @Component({
   selector: 'app-search',
@@ -16,9 +17,19 @@ export class SearchComponent implements OnInit {
   public autoList: any = [];
   public id: any;
   public moviesInfo: any;
+  public finder: any;
+  public tweetList: any;
 
+<<<<<<< HEAD
 
   constructor( public moviesService: MoviesService, public favoritos: FavoritoService, public db: AngularFireDatabase, twitterService: TwitterService) { }
+=======
+  constructor(
+    public moviesService: MoviesService,
+    public favoritos: FavoritoService,
+    public db: AngularFireDatabase,
+    public as: AmazonService) { }
+>>>>>>> upstream/master
 
   ngOnInit() {
    }
@@ -30,15 +41,19 @@ export class SearchComponent implements OnInit {
     });
   }
 
+
   public viewCard(id) {
     this.moviesService.getInfoMovie(id)
     .subscribe((resp: any) => {
       this.moviesInfo = Object.values(resp);
+      console.log(this.moviesInfo);
     });
   }
 
   public addFav(movieInfo) {
     this.favoritos.newFav(movieInfo);
+    // let etiqueta = <HTMLFormElement>document.getElementsByClassName('titlehide')
+    // etiqueta.style.display = "none";
   }
 
   public addViewed(movieInfo) {
@@ -49,5 +64,8 @@ export class SearchComponent implements OnInit {
     this.favoritos.newToWatch(movieInfo);
   }
 
+  // public amazon(title) {
+  //   this.as.getTAmazon(title);
+  // }
 
 }

@@ -62,11 +62,7 @@ export class LoginComponent implements OnInit {
       .then(() => {
       })
       .catch(() => {
-        this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
-            duration: 3000
-          });
+
       });
   }
 

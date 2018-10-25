@@ -12,35 +12,40 @@ import { Router } from '@angular/router';
 })
 export class ComentariosComponent implements OnInit {
 
-  items:any;
+  items: any;
 
   editarItem: any = {
     name: '',
 
   authForm: FormGroup
-  }
+  };
 
-  constructor(private conexion:ConexionService, formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private router: Router) { 
-    this.conexion.publicacionesItem().subscribe(item=>{
+  constructor(
+    private conexion: ConexionService,
+    formBuilder: FormBuilder,
+    private authService: AuthService,
+    public snackBar: MatSnackBar,
+    private router: Router) {
+    this.conexion.publicacionesItem().subscribe( item => {
       this.items = item;
-      console.log(this.items)
+      console.log(this.items);
     });
   }
 
   ngOnInit() {
   }
 
-  eliminar(item){
-    if(confirm('¿Quieres eliminar esta publicación?')){
+  eliminar(item) {
+    if (confirm('¿Quieres eliminar esta publicación?')) {
     this.conexion.eliminarItem(item);
   }
 }
 
-  editar(item){
+  editar(item) {
     this.editarItem = item;
   }
 
-  guardarItemEditado(){
+  guardarItemEditado() {
     this.conexion.EditarItem(this.editarItem);
   }
 }
