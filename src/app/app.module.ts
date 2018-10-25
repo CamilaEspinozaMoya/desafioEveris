@@ -12,7 +12,7 @@ import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SearchComponent } from './componentes/search/search.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
-import { ConexionService} from './services/services/conexion.service';
+import { ConexionService} from './services/conexion.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
