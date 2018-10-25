@@ -12,7 +12,7 @@ import { SplashComponent } from './componentes/splash/splash.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SearchComponent } from './componentes/search/search.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
-import { ConexionService} from './services/services/conexion.service';
+import { ConexionService} from './services/conexion.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -29,8 +29,7 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { DataprofileComponent } from './componentes/dataprofile/dataprofile.component';
 import { MatCardModule} from '@angular/material/card';
-import { TwitterComponent } from './componentes/twitter/twitter.component';
-
+import { FacebookModule } from "ngx-facebook";
 
 const appRoutes: Routes = [
   {
@@ -69,8 +68,6 @@ const appRoutes: Routes = [
     CarruselComponent,
     PerfilComponent,
     DataprofileComponent,
-    TwitterComponent,
-
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -90,7 +87,8 @@ const appRoutes: Routes = [
     AngularFireStorageModule,
     AngularFirestoreModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    FacebookModule.forRoot()
   ],
   providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]

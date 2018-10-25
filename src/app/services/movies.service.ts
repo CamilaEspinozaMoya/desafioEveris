@@ -12,7 +12,7 @@ public movies: any;
 
  public getMovies(query) {
     return new Promise( (resolve, reject) => {
-      this.http.get(`http://www.omdbapi.com/?apikey=d1ab6f3c&s=${query}`)
+      this.http.get(`https://www.omdbapi.com/?apikey=d1ab6f3c&s=${query}`)
       .subscribe((resp: any) => {
         this.movies = Object.values(resp);
         resolve(resp);
@@ -21,7 +21,7 @@ public movies: any;
   }
 
   public getInfoMovie(id) {
-    return this.http.get(`http://www.omdbapi.com/?apikey=d1ab6f3c&i=${id}`);
+    return this.http.get(`https://www.omdbapi.com/?apikey=d1ab6f3c&i=${id}`);
   }
 
 }
