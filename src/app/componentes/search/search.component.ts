@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { FavoritoService } from '../../services/favorito.service';
 
 @Component({
   selector: 'app-search',
@@ -14,7 +16,7 @@ export class SearchComponent implements OnInit {
   public id: any;
   public moviesInfo: any;
 
-  constructor( public moviesService: MoviesService) { }
+  constructor( public moviesService: MoviesService, public favoritos: FavoritoService,public db: AngularFireDatabase) { }
 
   ngOnInit() {
    }
@@ -30,9 +32,12 @@ export class SearchComponent implements OnInit {
     this.moviesService.getInfoMovie(id)
     .subscribe((resp: any) => {
       this.moviesInfo = Object.values(resp);
-      console.log(this.moviesInfo);
     });
   }
+
+ public addFav(movieInfo) {
+   this.favoritos.newFav(movieInfo);
+ }
 
 
 }
