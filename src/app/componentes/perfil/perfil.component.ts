@@ -11,7 +11,7 @@ export class PerfilComponent implements OnInit {
 public favList: any;
 public viewed: any;
 public toWatch: any;
-
+public visib = true;
 
   constructor( public favsService: FavoritoService, public amazon: AmazonService) {
     this.favsService.getFav();

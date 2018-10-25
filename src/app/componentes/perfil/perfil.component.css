@@ -1,5 +1,6 @@
 .favorites{
   background: white;
+  border-radius: 8px;
   width: 60%;
 }
 
@@ -9,7 +10,7 @@
   width: 100%;
 }
 .img{
-  width: 30%;
+  width: 40%;
   margin-top: 2em;
 }
 .button{
@@ -20,4 +21,13 @@
 }
 .titlehide{
   color: rgb(148, 146, 146);
+}
+
+.contenedormovies{
+  background-color: rgba(0, 0, 0, 0.479);
+  padding-bottom: 1em;
+}
+
+.titles{
+  color: white;
 }

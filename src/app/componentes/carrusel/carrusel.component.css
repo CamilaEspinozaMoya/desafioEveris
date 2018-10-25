@@ -9,3 +9,13 @@
     display: none;
   }
 }
+
+.welcomename{
+  margin-top: 1em;
+  float: right;
+  color: gray;
+}
+.subtitle{
+  color: #e41d24;
+  text-align: center;
+}
