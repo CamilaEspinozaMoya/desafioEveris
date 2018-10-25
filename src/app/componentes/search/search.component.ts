@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
    }
 
-  public getquery(id) {
+  public getquery(query: any) {
     this.moviesService.getMovies(this.query).then(movie => {
       this.autoList = [];
       this.autoList = movie['Search'];
