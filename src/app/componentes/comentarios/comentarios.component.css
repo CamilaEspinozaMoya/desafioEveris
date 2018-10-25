@@ -3,3 +3,14 @@
   margin: 0;
   width: 100%;
 }
+
+.fa-trash-alt, .fa-pencil-alt{
+  color: rgb(66, 66, 66);
+  cursor: pointer;
+}
+
+.alert-warning{
+  height: 4em;
+  background-color: rgb(233, 232, 232);
+  color: rgb(27, 27, 27);
+}
