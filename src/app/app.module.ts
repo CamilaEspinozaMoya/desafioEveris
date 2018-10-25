@@ -29,7 +29,7 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { DataprofileComponent } from './componentes/dataprofile/dataprofile.component';
 import { MatCardModule} from '@angular/material/card';
-
+import { FacebookModule } from "ngx-facebook";
 
 const appRoutes: Routes = [
   {
@@ -68,7 +68,6 @@ const appRoutes: Routes = [
     CarruselComponent,
     PerfilComponent,
     DataprofileComponent,
-
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -88,7 +87,8 @@ const appRoutes: Routes = [
     AngularFireStorageModule,
     AngularFirestoreModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    FacebookModule.forRoot()
   ],
   providers: [AuthService, ConexionService, HttpClientModule],
   bootstrap: [AppComponent]
