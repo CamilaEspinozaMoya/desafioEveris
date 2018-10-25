@@ -36,3 +36,8 @@
   .mat-card-image{
     width: 70%;
   }
+
+  .fa-amazon{
+    color: orange;
+    font-size: 1.2em;
+  }

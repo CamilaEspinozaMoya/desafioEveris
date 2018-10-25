@@ -1,4 +1,4 @@
-<app-agregar-comentarios></app-agregar-comentarios>
+<app-agregar-comentarios *ngIf="(authService.user | async)"></app-agregar-comentarios>
 <div class="row">
   <div class="col-md-12">
     <div class="alert alert-warning mt-1" role="alert" *ngFor="let item of items">

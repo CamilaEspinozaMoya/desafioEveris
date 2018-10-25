@@ -3,6 +3,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FavoritoService } from '../../services/favorito.service';
 import { AmazonService } from '../../services/amazon.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-search',
@@ -23,7 +24,8 @@ export class SearchComponent implements OnInit {
     public moviesService: MoviesService,
     public favoritos: FavoritoService,
     public db: AngularFireDatabase,
-    public amazon: AmazonService) { }
+    public amazon: AmazonService,
+    public authService: AuthService) { }
 
   ngOnInit() {
    }
