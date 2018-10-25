@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
-<<<<<<< HEAD
-import * as firebase from 'firebase/app';
-import { Observable } from 'rxjs';
-=======
 import { Observable } from 'rxjs';
 import {map} from 'rxjs/operators';
 import { Movies } from '../interfaces/movies.interface';
->>>>>>> upstream/master
 
 export interface MoviesData {
   title: any;
