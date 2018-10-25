@@ -15,7 +15,7 @@ export class AgregarComentariosComponent implements OnInit {
     name: '',
   };
 
-  constructor(private servicio: ConexionService, public authService: AuthService) { }
+  constructor(private servicio: ConexionService, public authservice: AuthService) { }
 
   ngOnInit() {
   }
