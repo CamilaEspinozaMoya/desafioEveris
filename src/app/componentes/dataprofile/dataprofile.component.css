@@ -1,0 +1,27 @@
+.photoprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoprofile p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1em
+}
+
+.photoprofile img {
+    border-radius: 50%;
+    width: 85px;
+    border: 2px solid snow;
+}
+
+.container{
+    margin-top: 1em !important;
+    margin-bottom: 1em !important
+}
+
+.datos{
+    margin-top: 1em !important
+}

@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import {map} from 'rxjs/operators';
+import { Movies } from '../interfaces/movies.interface';
 
+export interface MoviesData {
+  title: any;
+  poster: any;
+  genre: any;
+  director: any;
+  $key: string;
+}
 @Injectable({
   providedIn: 'root'
 })

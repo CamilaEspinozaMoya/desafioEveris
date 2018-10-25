@@ -3,3 +3,9 @@
   margin: 0;
   width: 100%;
 }
+
+.btn-warning{
+  background-color: #9c050b;
+  border: #9c050b;
+  color: white;
+}
