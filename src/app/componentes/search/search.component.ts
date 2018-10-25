@@ -19,8 +19,8 @@ export class SearchComponent implements OnInit {
   public id: any;
   public moviesInfo: any;
 
-  constructor( public moviesService: MoviesService, public favoritos: FavoritoService,public db: AngularFireDatabase,private http:HttpClient) { }
-
+  constructor( public moviesService: MoviesService, public favoritos: FavoritoService,public db: AngularFireDatabase) { }
+  // (private http:HttpClient)
   ngOnInit() {
     // let response = this.http.get(' https://api.twitter.com/1.1/search/tweets.json?q=%23freebandnames')
     // response.subscribe((response)=>console.log(response))
