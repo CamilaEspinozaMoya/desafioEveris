@@ -36,7 +36,7 @@
                 <button type="button" class="button btn"  title="Agregar a favoritos" (click)="addFav(moviesInfo)"><i class="fas fa-heart"></i></button>
                 <button type="button" class="button btn"  title="Agregar a películas por ver" (click)="addToWatch(moviesInfo)"><i class="fas fa-eye"></i></button>
                 <button type="button" class="button btn"  title="Agregar a películas vistas" (click)="addViewed(moviesInfo)"><i class="far fa-check-circle"></i></button>
-              <app-comentarios></app-comentarios>
+                <a (click)="amazon.getAmazon(moviesInfo[0])" target="_blank" title="Ver en Amazon" href="{{amazon.url}}"><i class="fab fa-amazon"></i></a>              <app-comentarios></app-comentarios>
             </mat-card-actions>
             <app-facebook></app-facebook>
           </div>
