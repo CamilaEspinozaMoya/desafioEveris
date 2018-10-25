@@ -10,6 +10,7 @@
  <img src="{{favorite.poster}}" alt="">
 {{favorite.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)"><i class="fas fa-trash"></i></button>
+<a (click)="amazon.getAmazon(favorite.title)" title="Ver en Amazon" href="{{amazon.url}}"><i class="fas fa-amazon"></i></a>
 </div>
 
 <h4>Películas por ver</h4>
