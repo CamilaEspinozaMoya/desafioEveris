@@ -1,5 +1,6 @@
 <app-toolbar></app-toolbar>
 <app-dataprofile></app-dataprofile>
+
 <h4>Favoritas</h4>
 <div *ngFor="let favorite of favsService.favList"> 
 {{favorite.title}}
@@ -11,6 +12,12 @@
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)"><i class="fas fa-trash"></i></button>
 <button type="button" class="button" title="Ver en Amazon"><i class="fas fa-amazon"></i></button>
 </div>
+
+
+
+
+
+
 <h4>Películas por ver</h4>
 <div *ngFor="let view of favsService.viewList"> 
 {{view.title}}
@@ -21,6 +28,8 @@
 {{view.year}}
 <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteView(view.$key)"><i class="fas fa-trash"></i></button>
 </div>
+
+
 <h4>Películas vistas</h4>
 <div *ngFor="let watch of favsService.watchList"> 
 {{watch.title}}
