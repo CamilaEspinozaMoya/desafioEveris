@@ -1,54 +1,101 @@
 <app-toolbar></app-toolbar>
 <app-dataprofile></app-dataprofile>
 
+<<<<<<< HEAD
 <h4>Favoritas</h4>
 <div class="row">
   <div class="col-md-8 mx-auto text-center">
     <h4 class="mt-4" *ngIf="">Películas favoritas</h4>
     <hr>
     <h4 class="titlehide">Aún no has añadido ninguna película</h4>
+=======
+<div class="row">
+  <div class="col-md-8 mx-auto text-center contenedormovies">
+    <h4 class="mt-4 titles">Películas favoritas</h4>
+    <hr>
+    <!-- <h4 class="titlehide" *ngIf="visib" >Aún no has añadido ninguna película</h4> -->
+>>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
     <div class="row favorites mt-1" *ngFor="let favorite of favsService.favList">
       <div class="col-md-6 text-center">
         <img src="{{favorite.poster}}" class="img" alt="poster">
       </div>
       <div class="col-md-6 text-left">
+<<<<<<< HEAD
         <p class="mt-4">
           <strong>Título:</strong> {{favorite.title}} </p>
         <p>
           <strong>Año:</strong> {{favorite.year}} </p>
         <p>
           <strong>Sinopsis:</strong> {{favorite.sinopsis}}</p>
+=======
+          <p class="mt-4">
+              <strong>Título:</strong> {{favorite.title}} </p>
+            <p>
+              <strong>Año:</strong> {{favorite.year}} </p>
+            <p>
+              <strong>Sinopsis:</strong> {{favorite.sinopsis}}</p>
+            <p>
+              <strong>Director:</strong> {{favorite.director}}</p>
+            <p>
+              <strong>Ranking:</strong> {{favorite.ranking}}</p>
+>>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
         <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteFav(favorite.$key)">
           <i class="fas fa-trash"></i>
         </button>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-<h4>Películas por ver</h4>
-<div *ngFor="let view of favsService.viewList"> 
-{{view.title}}
-{{view.sinopsis}}
-{{view.ranking}}
-{{view.director}}
-<img src="{{view.poster}}" alt="">
-{{view.year}}
-<button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteView(view.$key)"><i class="fas fa-trash"></i></button>
+<<<<<<< HEAD
+=======
 </div>
+>>>>>>> e685584fae4467c6b5881d5e796ee23406fc560d
 
+<div class="row mt-5">
+    <div class="col-md-8 mx-auto text-center contenedormovies">
+      <h4 class="mt-4 titles">Películas por ver</h4>
+      <hr>
+      <div class="row favorites mt-1" *ngFor="let view of favsService.viewList">
+        <div class="col-md-6 text-center">
+          <img src="{{view.poster}}" class="img" alt="poster">
+        </div>
+        <div class="col-md-6 text-left">
+          <p class="mt-4">
+            <strong>Título:</strong> {{view.title}} </p>
+          <p>
+            <strong>Año:</strong> {{view.year}} </p>
+          <p>
+            <strong>Sinopsis:</strong> {{view.sinopsis}}</p>
+          <p>
+            <strong>Director:</strong> {{view.director}}</p>
+          <p>
+            <strong>Ranking:</strong> {{view.ranking}}</p>  
+            <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteView(view.$key)"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h4>Películas vistas</h4>
-<div *ngFor="let watch of favsService.watchList"> 
-{{watch.title}}
-{{watch.sinopsis}}
-{{watch.ranking}}
-{{watch.director}}
-<img src="{{watch.poster}}" alt="">
-{{watch.year}}
-<button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteWatch(watch.$key)"><i class="fas fa-trash"></i></button>
-</div>
+  <div class="row mt-5">
+      <div class="col-md-8 mx-auto text-center contenedormovies">
+        <h4 class="mt-4 titles">Películas vistas</h4>
+        <hr>
+        <div class="row favorites mt-1" *ngFor="let watch of favsService.watchList">
+          <div class="col-md-6 text-center">
+            <img src="{{watch.poster}}" class="img" alt="poster">
+          </div>
+          <div class="col-md-6 text-left">
+            <p class="mt-4">
+              <strong>Título:</strong> {{watch.title}} </p>
+            <p>
+              <strong>Año:</strong> {{watch.year}} </p>
+            <p>
+              <strong>Sinopsis:</strong> {{watch.sinopsis}}</p>
+            <p>
+              <strong>Director:</strong> {{watch.director}}</p>
+            <p>
+              <strong>Ranking:</strong> {{watch.ranking}}</p>  
+              <button type="button" class="button" title="Eliminar de Favoritos" (click)="favsService.deleteWatch(watch.$key)"><i class="fas fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
