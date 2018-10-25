@@ -11,13 +11,12 @@ public twitter: any;
 
   constructor(public http: HttpClient) { }
 
-  public getMovies() {
+  public getHashtags(query) {
     return new Promise( (resolve, reject) => {
-      this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23')
+      this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23${query}')
     .subscribe((resp: any) => {
       this.twitter = Object.values(resp);
       resolve(resp);      
-      
     });
     });
   }
